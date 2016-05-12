@@ -1,3 +1,22 @@
+Cyanogenmod for Mediatek MT6592 and MT6582
+
+Build
+
+    init Sync CyanogenMod source:
+
+      # repo init -u git://github.com/goayandi/android.git -b cm-13.0        
+      # repo sync
+
+    full build
+
+    # source build/envsetup.sh
+
+    # brunch cm_g750t01-userdebug
+    # brunch cm_IQ4511-userdebug
+    # brunch cm_g750t01-userdebug
+
+
+
 CyanogenMod
 ===========
 

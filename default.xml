@@ -515,7 +515,6 @@
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
 <!-- END AOSP -->
-
   <project path="device/wiko/s4750" name="goayandi/android_device_wiko_s4750" revision="cm-13.0" />
   <project path="vendor/wiko/s4750" name="goayandi/android_vendor_wiko_s4750" revision="cm-13.0" />
   

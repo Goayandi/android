@@ -522,5 +522,7 @@
   <project path="vendor/huawei/g750t01" name="ferhung-mtk/android_vendor_huawei_g750t01" revision="cm-13.0" />
   <project path="device/fly/IQ4511" name="hyperion70/android_device_fly_IQ4511" revision="cm-13.0" />
   <project path="vendor/fly/IQ4511" name="hyperion70/android_vendor_fly_IQ4511" revision="cm-13.0" />
+  <project path="device/wiko/s4750" name="goayandi/android_device_wiko_s4750" revision="cm-13.0" />
+  <project path="vendor/wiko/s4750" name="goayandi/android_vendor_wiko_s4750" revision="cm-13.0" />
   
 </manifest>

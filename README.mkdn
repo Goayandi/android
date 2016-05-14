@@ -12,8 +12,6 @@ Build
     # source build/envsetup.sh
 
     # brunch cm_g750t01-userdebug
-    # brunch cm_IQ4511-userdebug
-    # brunch cm_g750t01-userdebug
 
 
 

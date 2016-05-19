@@ -4,7 +4,7 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           revision="refs/tags/android-5.1.1_r37" />
+           revision="refs/tags/android-5.1.1_r33" />
 
   <remote  name="github"
            fetch=".."
@@ -326,6 +326,11 @@
   <project path="external/vim" name="CyanogenMod/android_external_vim" />
   <project path="external/webp" name="platform/external/webp" groups="pdk-cw-fs,qcom_msm8x26" remote="aosp" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" remote="aosp" />
+  <project path="external/whispersystems/TextSecure" name="CyanogenMod/android_external_whispersystems_TextSecure" />
+  <project path="external/whispersystems/curve25519" name="CyanogenMod/android_external_whispersystems_curve25519-java" />
+  <project path="external/whispersystems/libtextsecure" name="CyanogenMod/android_external_whispersystems_libtextsecure-java" />
+  <project path="external/whispersystems/libaxolotl" name="CyanogenMod/android_external_whispersystems_libaxolotl-android" />
+  <project path="external/whispersystems/WhisperPush" name="CyanogenMod/android_external_whispersystems_WhisperPush" />
   <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" groups="pdk" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" groups="pdk-cw-fs" remote="aosp" />
@@ -443,6 +448,7 @@
   <project path="packages/apps/Camera2" name="fire855/android_packages_apps_Camera2-mtk" revision="cm-12.1-mt6592" />
   <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" />
+  <project path="packages/apps/CMAccount" name="CyanogenMod/android_packages_apps_CMAccount" />
   <project path="packages/apps/CMBugReport" name="CyanogenMod/android_packages_apps_CMBugreport" />
   <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
   <!-- <project path="packages/apps/CMHome" name="CyanogenMod/android_packages_apps_CMHome" /> -->

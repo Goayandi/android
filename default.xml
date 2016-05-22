@@ -516,6 +516,6 @@
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
 <!-- END AOSP -->
 
-  <project path="device/wiko/s4750" name="Goayandi/android_device_wiko_s4750" revision="cm-13.0" />
-  <project path="vendor/wiko/s4750" name="Goayandi/android_vendor_wiko_s4750" revision="cm-13.0" />
+  <project path="device/wiko/s4750" name="Goayandi/android_device_wiko_s4750" revision="fly" />
+  <project path="vendor/wiko/s4750" name="Goayandi/android_vendor_wiko_s4750" revision="fly" />
 </manifest>

@@ -1,6 +1,6 @@
-# CyanogenMod 12.1 & CyanogenMod 13.0
+# AOSP 7.1.2
 
-This is a manifest for Wiko Highway Signs (s4750) which is based on Mediatek MT6592m SoC.
+This is a manifest for Xiaomi Mi Pad 3 (Cappu) which is based on Mediatek MT8176 SoC.
 
 # Build Environment
 
@@ -16,7 +16,14 @@ This is a manifest for Wiko Highway Signs (s4750) which is based on Mediatek MT6
 
 [Hint: This command updates the Ubuntu Packages List (Install Listing) and install the required version of Java]
 
- $ sudo apt-get install openjdk-7-jdk
+First you have to remove older Java-Versions
+
+ $ sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\*
+ 
+ Next: install Java 8
+ 
+ $ sudo apt-get update
+ $ sudo apt-get install openjdk-8-jdk
 
 * Let that install and then proceed.
 
@@ -24,7 +31,7 @@ This is a manifest for Wiko Highway Signs (s4750) which is based on Mediatek MT6
 
 [Hint: Running this command installs the other required packages to build android]
 
- $ sudo apt-get update && sudo apt-get install git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk2.8-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev openjdk-7-jre openjdk-7-jdk pngcrush schedtool libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool g++-multilib lib32z1-dev lib32ncurses5-dev lib32readline-gplv2-dev gcc-multilib maven tmux screen w3m ncftp
+ $ sudo apt-get install bison g++-multilib git gperf libxml2-utils make zlib1g-dev:i386 zip
 
 # Getting the Source
 
@@ -53,16 +60,14 @@ Alright, so now we’re getting there. I have outlined the basics of what we’r
 
   $ chmod a+x ~/bin/repo
 
-* Creating directory for where the CM repo will be stored and synced
+* Creating directory for where the AOSP repo will be stored and synced
 
-  $ mkdir ~/cm
-  $ cd ~/cm
+  $ mkdir ~/aosp
+  $ cd ~/aosp
 
-* Initializing the CM repo and downloading the manifest
+* Initializing the AOSP repo and downloading the manifest
 
-  $  repo init -u https://github.com/goayandi/android.git -b cm-12.1
-  or
-    $  repo init -u https://github.com/goayandi/android.git -b cm-13.0
+  $  repo init -u https://github.com/goayandi/android.git -b cappu-aosp-7.1.2
 
 * Syncing the source
 
@@ -76,22 +81,15 @@ Alright, so now we’re getting there. I have outlined the basics of what we’r
         
         # source build/envsetup.sh
 
-        # brunch cm_s4750-userdebug
+        # brunch full_cappu-user
+or	# brunch full_cappu-eng
+or	# brunch full_cappu_userdebug
 
 * Building other Custom-ROM's
 
 Building AOKP, Omni-Rom, ResurrectionRemix, crDroid, AICP, ... and other custom-roms have a look at these threads: http://stackoverflow.com/questions/11352709/android-device-configuration-for-aosp/11353248#11353248 &
 http://blog.udinic.com/2014/06/04/aosp-part-2-build-variants/
 
-# Limitations
-
-Services requires root:
-
-`system/core/rootdir/init.rc`
-
-  * surfaceflinger depends on sched_setscheduler calls, unable to change process priority from 'system' user (default user 'system')
-
-  * mediaserver depends on /data/nvram folder access, unable to do voice calls from 'media' user (default user 'media')
 
 # Thanks:
 	Ferhung
@@ -104,54 +102,4 @@ Services requires root:
 	and many more ...
 
 
-
-CyanogenMod
-===========
-
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via CyanogenMod Gerrit!
-You can do this by using these commands:
-
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
-
-    repo start cm-13.0 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [CyanogenMod Code Review](http://review.cyanogenmod.org/)
-
-
-Getting Started
----------------
-
-To get started with Android/CyanogenMod, you'll need to get
-familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
-
-To initialize your local repository using the CyanogenMod trees, use a command like this:
-
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
-
-Then to sync up:
-
-    repo sync
-
-Please see the [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) for building instructions.
-
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.cyanogenmod.org/w/Github_Organization)
-
-Buildbot
---------
-
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [CyanogenMod Jenkins](http://jenkins.cyanogenmod.org/)
+A more detailed build-instraction: https://developer.sonymobile.com/open-devices/aosp-build-instructions/how-to-build-aosp-nougat-for-unlocked-xperia-devices/

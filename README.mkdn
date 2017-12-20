@@ -88,7 +88,8 @@ or	# brunch full_cappu_userdebug
 * Building other Custom-ROM's
 
 Building AOKP, Omni-Rom, ResurrectionRemix, crDroid, AICP, ... and other custom-roms have a look at these threads: http://stackoverflow.com/questions/11352709/android-device-configuration-for-aosp/11353248#11353248 &
-http://blog.udinic.com/2014/06/04/aosp-part-2-build-variants/
+http://blog.udinic.com/2014/06/04/aosp-part-2-build-variants/ 
+Detailed build instructions: https://developer.sonymobile.com/open-devices/aosp-build-instructions/how-to-build-aosp-nougat-for-unlocked-xperia-devices/
 
 
 # Thanks:
@@ -101,5 +102,3 @@ http://blog.udinic.com/2014/06/04/aosp-part-2-build-variants/
 	superdragonpt
 	and many more ...
 
-
-A more detailed build-instraction: https://developer.sonymobile.com/open-devices/aosp-build-instructions/how-to-build-aosp-nougat-for-unlocked-xperia-devices/

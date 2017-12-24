@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote  name="github" fetch="http://github.com/" />
+
+<project path="device/xiaomi/cappu" name="goayandi/android_device_xiaomi_cappu" remote="github" revision="aosp-7.1.2" />
+<project path="vendor/xiaomi/cappu" name="goayandi/android_vendor_xiaomi_cappu" remote="github" revision="aosp-7.1.2" />
+
+</manifest> 

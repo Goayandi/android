@@ -79,11 +79,14 @@ Alright, so now we’re getting there. I have outlined the basics of what we’r
 
 * full build
         
-        # source build/envsetup.sh
+        $ source build/envsetup.sh
 
-        # brunch full_cappu-user
-or	# brunch full_cappu-eng
-or	# brunch full_cappu_userdebug
+        $ lunch full_cappu-user
+or	$ lunch full_cappu-eng
+or	$ lunch full_cappu_userdebug
+
+	$ make otapackage -jx
+	( x in -jx stands for the threads you want to use)
 
 * Building other Custom-ROM's
 
